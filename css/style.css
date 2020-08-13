@@ -1,6 +1,16 @@
 body {
   font-family: 'Open Sans', 'Noto Sans TC', 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #f5f5f5;
+  background: #e2e1e0;
   overflow: hidden;
   overflow-y: auto;
+}
+
+/**- header -**/
+.navbar-brand img {width: auto;max-height: 45px;}
+
+
+/**- wrap -**/
+.wrap {
+  margin-top: 80px;
+  height: 1000em;
 }
