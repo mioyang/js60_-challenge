@@ -9,9 +9,5 @@ body {
 .navbar-brand img {width: auto;max-height: 45px;}
 
 
-/**- wrap -**/
-.wrap {
-  margin-top: 80px;
-  /* height: 1000em; */
-}
-.show{display: none;}
+/**- wrap#44 -**/
+.show, .showUrl {display: none;}

@@ -6,40 +6,34 @@ let btn4 = document.querySelector("#btn4");
 let btn5 = document.querySelector("#btn5");
 let show = document.querySelector(".show");
 
-btn1.addEventListener("click", getHref);
-btn2.addEventListener("click", getHost);
-btn3.addEventListener("click", getHostname);
-btn4.addEventListener("click", getPathname);
-btn5.addEventListener("click", pageReload);
-
-function getHref () {
+btn1.addEventListener("click", () => {
   let str = `<p>目前網址：<span class="text-success"> ${location.href} </span></p>`;
-  show.style.display="block";
+  show.style.display = "block";
   show.innerHTML = str;
-};
+});
 
-function getHost() {
+btn2.addEventListener("click", () => {
   let str = `<p>目前主機：<span class="text-success"> ${location.host} </span></p>`;
-  show.style.display="block";
+  show.style.display = "block";
   show.innerHTML = str;
-};
+});
 
-function getHostname() {
+btn3.addEventListener("click", () => {
   let str = `<p>目前網域：<span class="text-success"> ${location.hostname} </span></p>`;
-  show.style.display="block";
+  show.style.display = "block";
   show.innerHTML = str;
-};
+});
 
-function getPathname() {
+btn4.addEventListener("click", () => {
   let str = `<p>目前路徑：<span class="text-success"> ${location.pathname} </span></p>`;
-  show.style.display="block";
+  show.style.display = "block";
   show.innerHTML = str;
-};
+});
 
-function pageReload() {
+btn5.addEventListener("click", (e) => {
   e.preventDefault();
   window.location.reload();
-};
+});
 
 
 
@@ -47,38 +41,49 @@ function pageReload() {
 let btn6 = document.querySelector("#btn6");
 let btn7 = document.querySelector("#btn7");
 
-btn6.addEventListener("click", toGoogle);
-btn7.addEventListener("click", toYahoo);
-
-function toGoogle() {
+btn6.addEventListener("click", () => {
   let google = "https://www.google.com/";
   window.location = google;
-};
+});
 
-function toYahoo() {
+btn7.addEventListener("click", () => {
   let yahoo = "https://tw.yahoo.com/";
   window.location = yahoo;
-};
+});
 
 
 
-//Day 46
+//Day 46-1
 let btnTom = document.querySelector("#btnTom");
 let btnJohn = document.querySelector("#btnJohn");
 let hexschool = "https://www.hexschool.com";
 
-btnTom.addEventListener("click", recommendTom);
-btnJohn.addEventListener("click", recommendJohn);
-
-function recommendTom() {
+btnTom.addEventListener("click", () => {
   let id = btnTom.getAttribute('data-id');
   location.href = `${hexschool}/?recommend=${id}`;
-}
+});
 
-function recommendJohn() {
+btnJohn.addEventListener("click", () => {
   let id = btnJohn.getAttribute('data-id');
   location.href = `${hexschool}/?recommend=${id}`;
-}
+});
 
+
+
+//Day 46-2
+let btnTom2 = document.querySelector("#btnTom2");
+let btnJohn2 = document.querySelector("#btnJohn2");
+
+btnTom2.addEventListener("click", () => {
+  let id = btnTom2.getAttribute('data-id');
+  let newUrl = location.pathname + `?recommend=${id}`;
+  location.href = newUrl;
+});
+
+btnJohn2.addEventListener("click", () => {
+  let id = btnJohn2.getAttribute('data-id');
+  let newUrl = location.pathname + `?recommend=${id}&like=1&login=true`;
+  location.href = newUrl;
+});
 
 

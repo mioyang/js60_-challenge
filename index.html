@@ -11,27 +11,27 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;700&family=Open+Sans:wght@300;400;700&display=swap"
     rel="stylesheet">
+  <!-- Linearicons -->
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="navbar navbar-dark bg-dark fixed-top d-flex justify-content-center">
+  <header class="navbar sticky-top navbar-dark bg-dark justify-content-center">
+    <!-- <a class="navbar-brand hide-sidenav-btn mr-auto" href="#">
+      <span class="lnr lnr-menu"></span>
+    </a> -->
     <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
   </header>
+  <!-- 左側工具列 -->
+  <nav class="navpanel navpanel-fixed-left hidden"></nav>
   <div class="container wrap py-5">
     <div class="row">
-      <!-- <div class="col-12 col-md-2">
-        <div class="position-sticky mt-3">
-          <ul class="list-group list-group-flush">
-            <a href="#level44" class="list-group-item list-group-item-action">Day 44</a>
-            <a href="#level45" class="list-group-item list-group-item-action">Day 45+46</a>
-          </ul>
-        </div>        
-      </div> -->
       <div class="col-12 bg-white main mt-3">
         <div id="level44" class="p-3 my-3">
           <h2 class="font-weight-bold border-bottom mb-3 pb-2">第44關</h2>
-          <p>參考資料：<a href="http://www.wibibi.com/info.php?tid=82" target="_blank" rel="noopener noreferrer">用 JavaScript 取得目前網址與其它網址參數簡單語法</a></p>
+          <p>參考資料：<a href="http://www.wibibi.com/info.php?tid=82" target="_blank" rel="noopener noreferrer">用 JavaScript
+              取得目前網址與其它網址參數簡單語法</a></p>
           <div class="btn-group">
             <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn1">取得網址</a>
             <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn2">取得主機</a>
@@ -51,16 +51,18 @@
         </div>
         <div id="level46" class="p-3 mb-3">
           <h2 class="font-weight-bold border-bottom mb-3 pb-2">第46關</h2>
-          <p class="d-flex align-items-center"><span class="badge badge-warning mr-2">Question 1</span> 以下有兩顆按鈕，是部落格推薦連結，請抓取 data-id 的值後進行轉址</p>
+          <p class="d-flex align-items-center"><span class="badge badge-warning mr-2">Question 1</span>
+            以下有兩顆按鈕，是部落格推薦連結，請抓取 data-id 的值後進行轉址</p>
           <div class="btn-group mb-5">
             <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnTom" data-id="tom">Tom 推薦六角學院</a>
             <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnJohn" data-id="john">John 推薦六角學院</a>
           </div>
-          <!-- <p class="d-flex align-items-center"><span class="badge badge-warning mr-2">Question 2</span> 如果網址規則是https://www.hexschool.com/?recommend="值"，該如何取出 recommend 的值？</p>
+          <p class="d-flex align-items-center"><span class="badge badge-warning mr-2">Question 2</span>
+            如果網址規則是https://www.hexschool.com/?recommend="值"，該如何取出 recommend 的值？</p>
           <div class="btn-group">
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnTom" data-id="tom">Tom 推薦六角學院</a>
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnJohn" data-id="john">John 推薦六角學院</a>
-          </div>-->
+            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnTom2" data-id="tom2">取得單一參數</a>
+            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnJohn2" data-id="john2">取得多個參數</a>
+          </div>
         </div>
       </div>
     </div>
@@ -71,13 +73,13 @@
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="js/all.js"></script>
 </body>
 
