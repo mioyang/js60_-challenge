@@ -12,5 +12,5 @@ body {
 /**- wrap -**/
 .wrap {
   margin-top: 80px;
-  height: 1000em;
+  /* height: 1000em; */
 }
