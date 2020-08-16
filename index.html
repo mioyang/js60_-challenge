@@ -16,16 +16,44 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="has-sidenav-fixed hideSidenav">
   <header class="navbar sticky-top navbar-dark bg-dark justify-content-center">
-    <!-- <a class="navbar-brand hide-sidenav-btn mr-auto" href="#">
+    <a id="sidenavBtn" class="navbar-brand mr-auto" href="#">
       <span class="lnr lnr-menu"></span>
-    </a> -->
-    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+    </a>
+    <a class="navbar-brand mr-auto" href="index.html"><img src="images/logo.png" alt=""></a>
   </header>
   <!-- 左側工具列 -->
-  <nav class="navpanel navpanel-fixed-left hidden"></nav>
-  <div class="container wrap py-5">
+  <nav class="sideNav" id="sideNav">
+    <div class="sideNav-container">
+      <div class="sideNav-body">
+        <ul class="list-unstyled sideNav-item">
+          <li>
+            <a href="index.html#level44" class="sideNav-link">
+              <span class="lnr lnr-book"></span> 第44關
+            </a>
+          </li>
+          <li>
+            <a href="index.html#level45" class="sideNav-link">
+              <span class="lnr lnr-book"></span> 第45關
+            </a>
+          </li>
+          <li>
+            <a href="index.html#level46" class="sideNav-link">
+              <span class="lnr lnr-book"></span> 第46關
+            </a>
+          </li>
+          <!-- <li>
+            <a href="level47.html" class="sideNav-link">
+              <span class="lnr lnr-book"></span> 第47關
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- 主要內容 -->
+  <div class="container wrap py-3">
     <div class="row">
       <div class="col-12 bg-white main mt-3">
         <div id="level44" class="p-3 my-3">

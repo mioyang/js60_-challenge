@@ -1,3 +1,15 @@
+//隱藏左側選單
+let sidenavBtn = document.querySelector("#sidenavBtn");
+let sidenavHide = document.querySelector(".has-sidenav-fixed");
+sidenavBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  sidenavHide.classList.toggle("hideSidenav");
+});
+// $('.hide-sidenav-btn').on('click', function (e) {
+//   e.preventDefault();
+//   $('body').toggleClass('hide-navpanel');
+// });
+
 // Day44
 let btn1 = document.querySelector("#btn1");
 let btn2 = document.querySelector("#btn2");
