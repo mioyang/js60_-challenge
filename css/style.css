@@ -32,57 +32,57 @@ a:hover {text-decoration: none;}
   transition: all .15s; 
 }
 .sideNav-container {
-    position: relative;
-    width: 240px;
-    height: 100%;
-        display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0,0,0,.19);
+  position: relative;
+  width: 240px;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0,0,0,.19);
 }
 .sideNav-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 15px;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 15px;
 }
 .sideNav-item {
-    transition: all .3s ease-in-out;
-    margin-left: -15px;
-    margin-right: -15px;
+  transition: all .3s ease-in-out;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 .sideNav-item a.sideNav-link {
-    padding: 15px;
-    color: #1b1b1b;
-    border-bottom: 1px solid #ced4da;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
+  padding: 15px;
+  color: #1b1b1b;
+  border-bottom: 1px solid #ced4da;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
 body.has-sidenav-fixed {
-    padding-left: 240px;
-    transition: all .15s ease-in-out;
+  padding-left: 240px;
+  transition: all .15s ease-in-out;
 }
 body.hideSidenav {
   padding-left: 0;
 }
 
 body.has-sidenav-fixed.hideSidenav .sideNav {
-    -ms-transform: translateX(-100%);
-    transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 @media (max-width: 576px) {
   body.has-sidenav-fixed {
-      position: relative;
-      left: 240px;
-      padding-left: 0;
-      transition: all .15s ease-in-out;
+    position: relative;
+    left: 240px;
+    padding-left: 0;
+    transition: all .15s ease-in-out;
   }
   body.hideSidenav {
     position: relative;
@@ -90,10 +90,10 @@ body.has-sidenav-fixed.hideSidenav .sideNav {
     padding-left: 0;
   }
   body.has-sidenav-fixed.hideSidenav .sideNav {
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   body.has-sidenav-fixed.hideSidenav .navbar {
-      left: 0;
+    left: 0;
   }
 }

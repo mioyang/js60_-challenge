@@ -57,18 +57,26 @@
         <div class="row">
             <div class="col-12 bg-white main mt-3">
                 <div id="level47" class="p-3 my-3">
-                    <h2 class="font-weight-bold border-bottom mb-3 pb-2">第47關</h2>
-                    <!-- <p>參考資料：<a href="http://www.wibibi.com/info.php?tid=82" target="_blank" rel="noopener noreferrer">用
-                            JavaScript
-                            取得目前網址與其它網址參數簡單語法</a></p>
-                    <div class="btn-group">
-                        <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn1">取得網址</a>
-                        <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn2">取得主機</a>
-                        <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn3">取得網域</a>
-                        <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn4">取得路徑</a>
-                        <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn5">重新整理</a>
+                    <h2 class="font-weight-bold border-bottom mb-3 pb-2">第47關 AJAX POST</h2>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <form id="registerForm">
+                                <div class="form-group">
+                                    <label for="registerEmail">帳號</label>
+                                    <input type="email" class="form-control" id="registerEmail" placeholder="請輸入電子信箱"
+                                        data-error="郵件格式錯誤">                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="registerPassword">密碼</label>
+                                    <input type="password" class="form-control" id="registerPassword" placeholder="請輸入密碼">
+                                </div>
+                                <button type="submit" class="btn btn-primary" id="registerBtn">註冊</button>
+                            </form>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="feedback"></div>
+                        </div>
                     </div>
-                    <div class="show p-3 mt-3"></div> -->
                 </div>
             </div>
         </div>
@@ -86,7 +94,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
         </script>
-    <script src="js/all.js"></script>
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="js/basic.js"></script>
+    <script src="js/lever47.js"></script>
 </body>
 
 </html>
