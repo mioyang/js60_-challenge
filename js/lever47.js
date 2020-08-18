@@ -6,7 +6,6 @@ registerBtn.addEventListener( "click", () => {
   let mail = document.querySelector("#registerEmail").value;
   let pw = document.querySelector("#registerPassword").value;
   checkData(mail, pw);
-  mail.value = "";
 });
 
 
