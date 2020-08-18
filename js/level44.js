@@ -85,6 +85,3 @@ btnJohn2.addEventListener("click", () => {
   let newUrl = location.pathname + `?recommend=${id}&like=1&login=true`;
   location.href = newUrl;
 });
-
-
-//Day 47
