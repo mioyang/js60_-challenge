@@ -48,11 +48,11 @@
               <span class="lnr lnr-book"></span> 第47關
             </a>
           </li>
-          <!-- <li>
+          <li>
             <a href="level48.html" class="sideNav-link">
               <span class="lnr lnr-book"></span> 第48關
             </a>
-          </li> -->
+          </li>
         </ul>
       </div>
     </div>
@@ -61,40 +61,43 @@
   <div class="container wrap py-3">
     <div class="row">
       <div class="col-12 bg-white main mt-3">
-        <div id="level44" class="p-3 my-3">
-          <h2 class="font-weight-bold border-bottom mb-3 pb-2">第44關</h2>
-          <p>參考資料：<a href="http://www.wibibi.com/info.php?tid=82" target="_blank" rel="noopener noreferrer">用 JavaScript
-              取得目前網址與其它網址參數簡單語法</a></p>
-          <div class="btn-group">
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn1">取得網址</a>
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn2">取得主機</a>
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn3">取得網域</a>
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn4">取得路徑</a>
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn5">重新整理</a>
-          </div>
-          <div class="show p-3 mt-3"></div>
-        </div>
-        <div id="level45" class="p-3 mb-3">
-          <h2 class="font-weight-bold border-bottom mb-3 pb-2">第45關</h2>
-          <p>以下有兩顆按鈕，請使用 JavaScript 語法，操控點擊後，能夠轉址到對應網站去</p>
-          <div class="btn-group">
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn6">連到 Google</a>
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btn7">連到 Yahoo</a>
-          </div>
-        </div>
-        <div id="level46" class="p-3 mb-3">
-          <h2 class="font-weight-bold border-bottom mb-3 pb-2">第46關</h2>
-          <p class="d-flex align-items-center"><span class="badge badge-warning mr-2">Question 1</span>
-            以下有兩顆按鈕，是部落格推薦連結，請抓取 data-id 的值後進行轉址</p>
-          <div class="btn-group mb-5">
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnTom" data-id="tom">Tom 推薦六角學院</a>
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnJohn" data-id="john">John 推薦六角學院</a>
-          </div>
-          <p class="d-flex align-items-center"><span class="badge badge-warning mr-2">Question 2</span>
-            如果網址規則是https://www.hexschool.com/?recommend="值"，該如何取出 recommend 的值？</p>
-          <div class="btn-group">
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnTom2" data-id="tom2">取得單一參數</a>
-            <a href="#" class="btn btn-primary mx-2 rounded-0" id="btnJohn2" data-id="john2">取得多個參數</a>
+        <div id="level47" class="p-3 my-3">
+          <h2 class="font-weight-bold border-bottom mb-3 pb-2">第48關 AJAX POST 趴兔</h2>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <p class="h3 text-center py-3 text-dark">非會員註冊</p>
+              <form id="signForm">
+                <div class="form-group">
+                  <label for="signEmail">帳號</label>
+                  <input type="email" class="form-control" id="signEmail" placeholder="請輸入電子信箱">
+                  <div class="feedbacksMail"></div>
+                </div>
+                <div class="form-group">
+                  <label for="signPassword">密碼</label>
+                  <input type="password" class="form-control" id="signPassword" placeholder="請輸入密碼">
+                  <div class="feedbacksPassword"></div>
+                </div>
+                <button type="button" class="btn btn-primary" id="signBtn">註冊</button>
+              </form>
+              
+            </div>
+            <div class="col-12 col-md-6">
+              <p class="h3 text-center py-3 text-dark">會員登入</p>
+              <form id="loginForm">
+                <div class="form-group">
+                  <label for="loginEmail">帳號</label>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="請輸入電子信箱">
+                  <div class="feedbacklMail"></div>
+                </div>
+                <div class="form-group">
+                  <label for="loginPassword">密碼</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="請輸入密碼">
+                  <div class="feedbacklPassword"></div>
+                </div>
+                <button type="button" class="btn btn-warning" id="loginBtn">註冊</button>
+              </form>
+            
+            </div>
           </div>
         </div>
       </div>
@@ -106,15 +109,17 @@
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+  </script>
+  <!-- Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
   <script src="js/basic.js"></script>
-  <script src="js/level44.js"></script>
+  <script src="js/lever48.js"></script>
 </body>
 
 </html>
