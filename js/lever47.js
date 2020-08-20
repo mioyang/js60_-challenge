@@ -2,7 +2,7 @@
 let apiUrl = "https://hexschool-tutorial.herokuapp.com/api/signup";
 let registerBtn = document.querySelector("#registerBtn");
 
-registerBtn.addEventListener( "click", () => {
+registerBtn.addEventListener("click", () => {
   let mail = document.querySelector("#registerEmail").value;
   let pw = document.querySelector("#registerPassword").value;
   checkData(mail, pw);
@@ -27,7 +27,7 @@ function checkData(mail, pw) {
   }).catch((error) => {
     console.log('資料錯誤', error);
   });
-  
+
 };
 
 

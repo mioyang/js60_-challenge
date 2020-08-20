@@ -69,32 +69,35 @@
               <form id="signForm">
                 <div class="form-group">
                   <label for="signEmail">帳號</label>
-                  <input type="email" class="form-control" id="signEmail" placeholder="請輸入電子信箱">
+                  <input type="email" class="form-control mail" id="signEmail" placeholder="請輸入電子信箱">
                   <div class="feedbackMail"></div>
                 </div>
                 <div class="form-group">
                   <label for="signPassword">密碼</label>
-                  <input type="password" class="form-control" id="signPassword" placeholder="請輸入密碼">
+                  <input type="password" class="form-control password" id="signPassword" placeholder="請輸入密碼"
+                    maxlength="8">
                   <div class="feedbackPassword"></div>
                 </div>
                 <button type="button" class="btn btn-primary" id="signBtn">註冊</button>
+                <div class="userFeedback mt-3"></div>
               </form>
-
             </div>
             <div class="col-12 col-md-6">
               <p class="h3 text-center py-3 text-dark">會員登入</p>
               <form id="loginForm">
                 <div class="form-group">
                   <label for="loginEmail">帳號</label>
-                  <input type="email" class="form-control" id="loginEmail" placeholder="請輸入電子信箱" required>
+                  <input type="email" class="form-control mail" id="loginEmail" placeholder="請輸入電子信箱">
                   <div class="feedbackMail"></div>
                 </div>
                 <div class="form-group">
                   <label for="loginPassword">密碼</label>
-                  <input type="password" class="form-control" id="loginPassword" placeholder="請輸入密碼" required>
+                  <input type="password" class="form-control password" id="loginPassword" placeholder="請輸入密碼"
+                    maxlength="8">
                   <div class="feedbackPassword"></div>
                 </div>
-                <button type="button" class="btn btn-warning" id="loginBtn">註冊</button>
+                <button type="button" class="btn btn-warning" id="loginBtn">登入</button>
+                <div class="userFeedback mt-3"></div>
               </form>
 
             </div>
