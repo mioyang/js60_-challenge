@@ -7,7 +7,12 @@ const logIn = document.querySelector('#loginForm');
 let signBtn = document.querySelector("#signBtn");
 let loginBtn = document.querySelector("#loginBtn");
 
-
+//clean form
+let clearMail = document.querySelectorAll(".mail");
+let clearPw = document.querySelectorAll(".password");
+let feedbackUser = document.querySelectorAll(".userFeedback");
+let feedbackMail = document.querySelectorAll(".feedbackMail");
+let feedbackPw = document.querySelectorAll(".feedbackPassword");
 
 //Email驗證
 const checkEmail = (value) => {
@@ -54,7 +59,7 @@ const checkPw = (value) => {
     return false
   }
 };
-//.classList.contains
+
 //狀態切換
 const checkValid = (e) => {
   e.preventDefault();
@@ -96,23 +101,30 @@ const checkValid = (e) => {
 
 
 //清除資料
-const cleanData = () => {
-  let clearMail = document.querySelector(".mail");
-  let clearPw = document.querySelector(".password");
-  let feedbackUser = document.querySelector(".userFeedback");
-  let feedbackMail = document.querySelector(".feedbackMail");
-  let feedbackPw = document.querySelector(".feedbackPassword");
+const cleanData = (e) => {
+  // if (!signUp.classList.contains('isValid')) {
+  //   logIn.querySelector("#loginEmail").value = '';
+  //   logIn.querySelector("#loginEmail").classList.remove('is-valid');
+  //   logIn.querySelector("#loginEmail").classList.remove('is-invalid');
 
-  feedbackUser.innerHTML = '';
-  feedbackMail.innerHTML = '';
-  feedbackPw.innerHTML = '';
-  clearMail.value = '';
-  clearMail.classList.remove('is-valid');
-  clearMail.classList.remove('is-invalid');
-  clearPw.value = '';
-  clearPw.classList.remove('is-valid');
-  clearPw.classList.remove('is-invalid');
+  // } else if (!logIn.classList.contains('isValid')) {
+  //   // feedbackUser.innerHTML = '';
+  //   // feedbackMail.innerHTML = '';
+  //   // feedbackPw.innerHTML = '';
+  //   // clearMail.value = '';
+  //   // clearMail.classList.remove('is-valid');
+  //   // clearMail.classList.remove('is-invalid');
+  //   // clearPw.value = '';
+  //   // clearPw.classList.remove('is-valid');
+  //   // clearPw.classList.remove('is-invalid');
+  // } else {
+  //   return false
+  // }
+
 };
+
+// const signUp = document.querySelector('#signForm');
+// const logIn = document.querySelector('#loginForm');
 
 //送出資料
 const postData = (action, data) => {
