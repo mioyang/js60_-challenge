@@ -1,18 +1,26 @@
 //Day 48
 let apiUrl = "https://hexschool-tutorial.herokuapp.com/api/";
 const data = {};
+
+//註冊事件元素
 const signUp = document.querySelector('#signForm');
-const logIn = document.querySelector('#loginForm');
-
 let signBtn = document.querySelector("#signBtn");
-let loginBtn = document.querySelector("#loginBtn");
+let signMail = signUp.querySelector(".mail");
+let signPw = signUp.querySelector(".password");
+let signMailmsg = signUp.querySelector(".feedbackMail");
+let signPwmsg = signUp.querySelector(".feedbackPassword");
+let signUsermsg = signUp.querySelector(".userFeedback");
 
-//clean form
-let clearMail = document.querySelectorAll(".mail");
-let clearPw = document.querySelectorAll(".password");
-let feedbackUser = document.querySelectorAll(".userFeedback");
-let feedbackMail = document.querySelectorAll(".feedbackMail");
-let feedbackPw = document.querySelectorAll(".feedbackPassword");
+//登入事件元素
+const logIn = document.querySelector('#loginForm');
+let loginBtn = document.querySelector("#loginBtn");
+let loginMail = logIn.querySelector(".mail");
+let loginPw = logIn.querySelector(".password");
+let loginMailmsg = logIn.querySelector(".feedbackMail");
+let loginPwmsg = logIn.querySelector(".feedbackPassword");
+let loginUsermsg = logIn.querySelector(".userFeedback");
+
+
 
 //Email驗證
 const checkEmail = (value) => {
@@ -102,29 +110,29 @@ const checkValid = (e) => {
 
 //清除資料
 const cleanData = (e) => {
-  // if (!signUp.classList.contains('isValid')) {
-  //   logIn.querySelector("#loginEmail").value = '';
-  //   logIn.querySelector("#loginEmail").classList.remove('is-valid');
-  //   logIn.querySelector("#loginEmail").classList.remove('is-invalid');
+  //註冊表單清空
+  signMail.value = '';
+  signMail.classList.remove('is-valid');
+  signMail.classList.remove('is-invalid');
+  signPw.value = '';
+  signPw.classList.remove('is-valid');
+  signPw.classList.remove('is-invalid');
+  signMailmsg.innerHTML = '';
+  signPwmsg.innerHTML = '';
+  signUsermsg.innerHTML = '';
 
-  // } else if (!logIn.classList.contains('isValid')) {
-  //   // feedbackUser.innerHTML = '';
-  //   // feedbackMail.innerHTML = '';
-  //   // feedbackPw.innerHTML = '';
-  //   // clearMail.value = '';
-  //   // clearMail.classList.remove('is-valid');
-  //   // clearMail.classList.remove('is-invalid');
-  //   // clearPw.value = '';
-  //   // clearPw.classList.remove('is-valid');
-  //   // clearPw.classList.remove('is-invalid');
-  // } else {
-  //   return false
-  // }
-
+  //登入表單清空
+  loginMail.value = '';
+  loginMail.classList.remove('is-valid');
+  loginMail.classList.remove('is-invalid');
+  loginPw.value = '';
+  loginPw.classList.remove('is-valid');
+  loginPw.classList.remove('is-invalid');
+  loginMailmsg.innerHTML = '';
+  loginPwmsg.innerHTML = '';
+  loginUsermsg.innerHTML = '';
 };
 
-// const signUp = document.querySelector('#signForm');
-// const logIn = document.querySelector('#loginForm');
 
 //送出資料
 const postData = (action, data) => {
