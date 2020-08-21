@@ -29,5 +29,3 @@ function checkData(mail, pw) {
   });
 
 };
-
-

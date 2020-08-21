@@ -152,7 +152,7 @@ const postData = (action, data) => {
     } else {
       feedbackUser.innerHTML += `<div class="alert alert-danger">${res.data.message}</div>`;
     }
-  }).catch((erroe) => {
+  }).catch((error) => {
     console.log('資料錯誤', error);
   });
   cleanData();
