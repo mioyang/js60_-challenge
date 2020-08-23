@@ -1,0 +1,34 @@
+body {
+    font-family: 'Raleway', 'Noto Sans TC', 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #e2e1e0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+a:hover, a:focus {text-decoration: none;}
+
+/**- header -**/
+.navbar-brand img {width: auto;max-height: 45px;}
+
+.photo-hover {
+	background: #000;
+	position: relative;
+	overflow: hidden;
+}
+.photo-hover img {
+	opacity: 1;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.photo-hover:hover img,
+.photo-hover:focus img,
+.photo-hover:active img,
+.card:hover .photo-hover img,
+.card:focus.photo-hover img,
+.card:active .photo-hover img{
+	opacity: .55;
+	-webkit-transform: scale3d(1.1, 1.1, 1);
+	transform: scale3d(1.1, 1.1, 1);
+}

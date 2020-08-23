@@ -12,8 +12,8 @@ var roomsList = document.querySelector("#roomList");
 
 //取得資料
 axios.get(roomUrl, {
-    headers
-  }).then((res) => {
+  headers
+}).then((res) => {
   // console.log('res', res.data)
   roomsData = res.data.items;
   renderRooms();
