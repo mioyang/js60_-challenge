@@ -1,0 +1,120 @@
+body {
+    font-family: 'Raleway', 'Noto Sans TC', 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* background: #e2e1e0; */
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+a:hover, a:focus {text-decoration: none;}
+
+/*-- 側選單 --*/
+.sideNav {
+	width: 160px;
+	height: 100vh;
+	background: #ECECEC;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.sideNav .menubutton {
+	display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+	color: #1b1b1b;
+	font-size: 20px;
+	width: 100%;
+	margin-top: 90px;
+}
+.sideNav .menubutton span {
+	margin-right: 20px;
+    width: 30px;
+    height: 1px;
+	background: #1b1b1b;
+	display: block;
+    position: relative;
+}
+.sideNav .menubutton span::before,
+.sideNav .menubutton span::after {
+	content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: #1b1b1b;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.sideNav .menubutton span::before {
+	-webkit-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    transform: translate(0, -5px);
+}
+.sideNav .menubutton span::after {
+	-webkit-transform: translate(0, 5px);
+    -ms-transform: translate(0, 5px);
+    transform: translate(0, 5px);
+}
+.sideNav .follow {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	-moz-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+	writing-mode: vertical-lr;
+	color: #0B346E;
+	text-align: center;
+}
+.sideNav .follow a{margin: 5px 0;}
+.sideNav .follow span{margin-bottom: 45px;}
+.sideNav .follow img {
+	width: 20px;
+	height: 20px;
+}
+.sideNav .language {
+	font-family: 'Noto Sans TC', sans-serif;
+	width: 100%;
+	text-align: center;
+	list-style:none;
+	margin: 45px 0;
+	padding: 0;
+}
+.sideNav .language a {color: #0B346E;}
+.sideNav .language li{padding: 5px 0;position: relative;}
+.sideNav .language li:first-child::after {
+	content: '';
+	width: 34px;
+	height: 1px;
+	background: #0B346E;
+	position: absolute;
+	left: calc(50% - 17px);
+	bottom: -1px;
+}
+
+
+/*-- 主要內容 --*/
+#main {
+	margin-left: 160px;
+}
+.banner {
+	height: 100vh;
+	overflow: hidden;
+	background: url(../images/bg_01.jpg) no-repeat center / cover;
+	position: relative;
+	z-index: 0;
+}
+.banner::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgba(27,27,27,.3);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
