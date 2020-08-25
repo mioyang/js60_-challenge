@@ -17,15 +17,9 @@ a:hover, a:focus {text-decoration: none;}
 	top: 0;
 }
 .sideNav .menubutton {
-	display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	color: #1b1b1b;
 	font-size: 20px;
 	width: 100%;
@@ -68,9 +62,10 @@ a:hover, a:focus {text-decoration: none;}
     -ms-writing-mode: vertical-lr;
 	writing-mode: vertical-lr;
 	color: #0B346E;
+	font-weight: 600;
 	text-align: center;
 }
-.sideNav .follow a{margin: 5px 0;}
+.sideNav .follow a{margin: 5px 0;display: flex;}
 .sideNav .follow span{margin-bottom: 45px;}
 .sideNav .follow img {
 	width: 20px;
@@ -101,14 +96,14 @@ a:hover, a:focus {text-decoration: none;}
 #main {
 	margin-left: 160px;
 }
-.banner {
+.bannerWrap {
 	height: 100vh;
 	overflow: hidden;
 	background: url(../images/bg_01.jpg) no-repeat center / cover;
 	position: relative;
 	z-index: 0;
 }
-.banner::before {
+.bannerWrap::before {
 	content: '';
 	width: 100%;
 	height: 100%;
@@ -117,4 +112,45 @@ a:hover, a:focus {text-decoration: none;}
 	left: 0;
 	top: 0;
 	z-index: -1;
+}
+.bannerImg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 60px;
+}
+.bannerImg img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 350px;
+}
+
+
+/*-- 訂房區 --*/
+.bookingBox {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	max-width: 1000px;
+	height: 120px;
+	background: #fff;
+}
+
+
+/*-- 關於我們 --*/
+.aboutWrap {
+	
 }
