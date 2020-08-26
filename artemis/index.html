@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Raleway:ital,wght@0,100;0,200;0,700;1,100;1,200;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Raleway:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap"
         rel="stylesheet">
     <!-- Ｈover.css -->
     <link rel="stylesheet" href="css/hover-min.css">
@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -48,18 +51,21 @@
                     <ul class="bookingList">
                         <li class="dateSelector">
                             <span class="bookingTitle">入住日期</span>
-                            <span class="ymData"></span>
-                            <span class="day"></span>
+                            <span class="ymData">Aug.2020</span>
+                            <span class="day">25</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
                         </li>
                         <li class="dateSelector">
                             <span class="bookingTitle">退房日期</span>
-                            <span class="ymData"></span>
-                            <span class="day"></span>
+                            <span class="ymData">Aug.2020</span>
+                            <span class="day">26</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
                         </li>
                         <li class="roomSelector">
                             <span class="bookingTitle">房客數量</span>
                             <span class="decoration">Room</span>
                             <span class="room">01</span>
+                            <i class="material-icons">keyboard_arrow_down</i>
                         </li>
                     </ul>
                     <button class="bookingSubmitBtn">立即訂房</button>
@@ -77,6 +83,17 @@
                     <p>感受獨一無二的旅程</p>
                 </div>
             </div>
+            <div class="col-12" id="roomList2">
+                <div class="roomWrap">
+                    <div><img
+                            src="https://images.unsplash.com/photo-1583505353532-c59e9abc1c92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80"
+                            alt=""></div>
+                    <div><img
+                            src="https://images.unsplash.com/photo-1579185099078-7d87828fe406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+                            alt=""></div>
+                </div>
+
+            </div>
         </div>
     </div>
 
@@ -90,9 +107,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
         </script>
+    <!-- Slick -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="js/all.js"></script>
+    <script>
+        $('.roomWrap').slick({
+            dots: false,
+            autoplay: false,
+            arrows: true,
+            infinite: true,
+            speed: 3000,
+            fade: true,
+            cssEase: 'linear'
+        });
+    </script>
 </body>
 
 </html>

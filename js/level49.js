@@ -38,29 +38,3 @@ const renderRooms = () => {
   });
   roomsList.innerHTML = roomElement;
 };
-
-// 
-
-// let roomURL = "https://challenge.thef2e.com/api/thef2e2019/stage6/rooms";
-// let singelRoomURL = "https://challenge.thef2e.com/api/thef2e2019/stage6/room/"
-
-// const headers = {
-//   'Accept': 'application/json',
-//   'Content-Type': 'application/json',
-//   'Authorization': 'Bearer '
-// }
-
-
-
-// axios.get(url)
-//   .catch(function (error) {
-//     console.log(error);
-//   })
-//   .then(function (res) {
-//     // console.log(res.data);
-//     var str = '';
-//     res.data.forEach(function (user) {
-//       str += `<li>${user.name}</li>`;
-//     });
-//     userList.innerHTML = str;
-//   });

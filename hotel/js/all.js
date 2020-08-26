@@ -18,12 +18,6 @@ let singleRoom = document.querySelector("#singleRoom");
 //判斷
 window.onload = () => {
     getData(`${roomUrl}rooms`);
-    // if (nowurl === undefined) {
-    //     getData(`${roomUrl}rooms`);
-    // } else {
-    //     console.log('hello world');
-    //     getData(`${roomUrl}room/${nowurl}`);
-    // };
 }
 
 //取得所有房型資料
@@ -124,53 +118,3 @@ const renderRoomDetail = () => {
     `;
     singleRoom.innerHTML = roomElement;
 }
-
-// {
-//     id: "3Elqe8kfMxdZv5xFLV4OUeN6jhmxIvQSTyj4eTgIowfIRvF4rerA2Nuegzc2Rgwu",
-//     name: "Single Room",
-//     imageUrl: Array(3),
-//     normalDayPrice: 1380,
-//     holidayPrice: 1500,
-//     …
-// }
-// amenities: {
-//     Wi - Fi: true,
-//     Breakfast: true,
-//     Mini - Bar: false,
-//     Room - Service: false,
-//     Television: true,
-//     …
-// }
-// checkInAndOut: {
-//     checkInEarly: "15:00",
-//     checkInLate: "19:00",
-//     checkOut: "10:00"
-// }
-// description: "Single Room is only reserved for one guest. There is a bedroom with a single size bed and a private bathroom. Everything you need prepared for you: sheets and blankets, towels, soap and shampoo, hairdryer are provided. In the room there is AC and of course WiFi."
-// descriptionShort: {
-//     GuestMin: 1,
-//     GuestMax: 1,
-//     Bed: Array(1),
-//     Private - Bath: 1,
-//     Footage: 18
-// }
-// holidayPrice: 1500 id: "3Elqe8kfMxdZv5xFLV4OUeN6jhmxIvQSTyj4eTgIowfIRvF4rerA2Nuegzc2Rgwu"
-// imageUrl: (3)["https://images.unsplash.com/photo-1551776235-dde6d…cHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80", "https://images.unsplash.com/photo-1526880792616-42…2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80", "https://images.unsplash.com/photo-1515511856280-7b…cHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1953&q=80"] name: "Single Room"
-// normalDayPrice: 1380 __proto__: Object
-
-// 房客人數限制: 1~1
-// 床型: Single
-// 衛浴數量: 1
-// 房間大小: 18
-// Single Room is only reserved
-// for one guest.There is a bedroom with a single size bed and a private bathroom.Everything you need prepared
-// for you: sheets and blankets, towels, soap and shampoo, hairdryer are provided.In the room there is AC and of course WiFi.
-
-// Check In
-// 15: 00 - 19: 00
-
-// Check Out
-// 10: 00
-
-// Wi - Fi
-

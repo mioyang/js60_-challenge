@@ -18,12 +18,6 @@ let singleRoom = document.querySelector("#singleRoom");
 //判斷
 window.onload = () => {
     getData(`${roomUrl}rooms`);
-    // if (nowurl === undefined) {
-    //     getData(`${roomUrl}rooms`);
-    // } else {
-    //     console.log('hello world');
-    //     getData(`${roomUrl}room/${nowurl}`);
-    // };
 }
 
 //取得所有房型資料
@@ -57,11 +51,11 @@ const getRoom = (apiUrl) => {
             roomsData.sort((a, b) => {
                 return parseInt(a.normalDayPrice) - parseInt(b.normalDayPrice);
             });
-            renderRooms();
+            // renderRooms();
         } else {
             roomInfo = res.data.room[0];
             // console.log(roomInfo);
-            renderRoomDetail();
+            // renderRoomDetail();
         }
 
         // console.log('newList', roomsData);
@@ -79,9 +73,8 @@ const renderRooms = () => {
 
     roomsData.forEach((item) => {
         roomElement += ` 
-            <div class="card my-2">
+            <div>
             <a href="./room.html?id=${item.id}">
-            <figure class="photo-hover"><img src = "${item.imageUrl[0]}" class="card-img-top" alt="${item.name}" ></figure>
             <div class="card-body">
                 <h3 class="card-title">${item.name}</h3>
                 <p class="card-text text-secondary">NT$ ${item.normalDayPrice}</p>
