@@ -83,20 +83,39 @@
                     <p>感受獨一無二的旅程</p>
                 </div>
             </div>
-            <div class="col-12" id="roomList2">
-                <div class="roomWrap">
-                    <div><img
-                            src="https://images.unsplash.com/photo-1583505353532-c59e9abc1c92?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80"
-                            alt=""></div>
-                    <div><img
-                            src="https://images.unsplash.com/photo-1579185099078-7d87828fe406?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-                            alt=""></div>
+            <div class="col-12 roomWrap p-0" id="roomList"></div>
+            <div class="col-12 py-5 trafficWrap">
+                <div class="title text-center">如何到達亞緹米思</div>
+                <div class="row px-5">
+                    <div class="col-3 trafficBox">
+                        <i class="material-icons">train</i>
+                        TRAIN / RAILWAY 搭乘火車 / 高鐵
+                    </div>
+                    <div class="col-3 trafficBox">
+                        <i class="material-icons">directions_bus</i>
+                        INTERCITY BUS 搭客運到達
+                    </div>
+                    <div class="col-3 trafficBox">
+                        <i class="material-icons">directions_car</i>
+                        SELF - DRIVING 自行開車
+                    </div>
+                    <div class="col-3 trafficBox">
+                        <i class="material-icons">local_airport</i>
+                        AIRPORT 從機場到達
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
-
+    <div class="container-fluid" id="footer">
+        <div class="flogo">
+            <img src="images/flogo.svg" alt="">
+        </div>
+        <ul class="info">
+            <li><i class="material-icons">local_phone</i>07-216-0000</li>
+            <li><i class="material-icons">place</i> 804高雄市鼓山區美術東八路514號</li>
+        </ul>
+    </div>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -112,17 +131,7 @@
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <script src="js/all.js"></script>
-    <script>
-        $('.roomWrap').slick({
-            dots: false,
-            autoplay: false,
-            arrows: true,
-            infinite: true,
-            speed: 3000,
-            fade: true,
-            cssEase: 'linear'
-        });
-    </script>
+
 </body>
 
 </html>

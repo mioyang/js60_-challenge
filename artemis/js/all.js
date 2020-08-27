@@ -11,7 +11,7 @@ const headers = {
 let roomsData = [];
 let roomInfo = [];
 let roomsList = document.querySelector("#roomList");
-let singleRoom = document.querySelector("#singleRoom");
+let singleRoom = document.querySelector("#singleRoom"); 
 
 
 
@@ -32,6 +32,8 @@ const getData = (apiUrl) => {
                 let rid = item.id;
                 getRoom(`${roomUrl}room/${rid}`);
             });
+            // console.log(newData)
+            // renderRooms(newData);
         } else {
             getRoom(`${roomUrl}room/${nowurl}`);
         }
@@ -51,7 +53,7 @@ const getRoom = (apiUrl) => {
             roomsData.sort((a, b) => {
                 return parseInt(a.normalDayPrice) - parseInt(b.normalDayPrice);
             });
-            // renderRooms();
+            renderRooms();
         } else {
             roomInfo = res.data.room[0];
             // console.log(roomInfo);
@@ -70,19 +72,38 @@ const getRoom = (apiUrl) => {
 const renderRooms = () => {
     let roomElement = '';
     console.log('roomsData', roomsData);
-
-    roomsData.forEach((item) => {
-        roomElement += ` 
-            <div>
-            <a href="./room.html?id=${item.id}">
-            <div class="card-body">
-                <h3 class="card-title">${item.name}</h3>
-                <p class="card-text text-secondary">NT$ ${item.normalDayPrice}</p>
-            </div>
-            </a>
+    // let roomsData = newData;
+    if (roomsData.length === 6) {
+        roomsData.forEach((item) => {
+            roomElement += ` 
+            <div class="roomBox col-12 p-0" style="background: url(${item.imageUrl[0]});">
+                <div class="roomInfo col-4 h-100">
+                    <div class="title">客房介紹</div>
+                    <div class="roomName">${item.name}</div>
+                    <p class="normalPrice"><small>平日</small> NT$ ${item.normalDayPrice}</p>
+                    <p class="roomDescription">${item.description}</p>
+                    <a href="./room.html?id=${item.id}" class="moreBtn">LEARN MORE</a>
+                </div>
             </div>`;
-    });
+        });
+    }
+    
     roomsList.innerHTML = roomElement;
+    // roomsList.appendChild(roomElement);
+    // roomsList.insertAdjacentHTML('afterbegin', roomElement);
+
+    if ( $('.roomBox').length === 6 ) {
+        // console.log($('.roomBox').length)
+        $('.roomWrap').slick({
+            dots: true,
+            autoplay: false,
+            arrows: true,
+            infinite: true,
+            speed: 3000,
+            fade: true,
+            cssEase: 'linear'
+        });
+    }
 };
 
 
