@@ -18,6 +18,9 @@ a:hover, a:focus {text-decoration: none;}
 	left: 0;
 	top: 0;
 	z-index: 99;
+	-webkit-box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, .1);
+	-moz-box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, .1);
+	box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, .1);
 }
 .sideNav .menubutton {
 	display: flex;
@@ -309,12 +312,75 @@ a:hover, a:focus {text-decoration: none;}
 /*-- 交通方式 --*/
 .trafficWrap .title {
 	background: url(../images/title_03.svg) no-repeat center top / 400px;
+	padding-top: 65px;
 }
-
+.trafficBox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.trafficBox .material-icons {
+	width: 60px;
+	height: 60px;
+	font-size: 30px;
+	border: 1px solid #9F7F5D;
+	color: #9F7F5D;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.trafficBox .material-icons::after {
+	content: '';
+	width: 20px;
+	height: 1px;
+	background: #9F7F5D;
+	position: absolute;
+	top: 50%;
+	right: -10px;
+}
+.trafficBox .txt {
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.125rem;
+}
+.trafficBox .txt>span {
+	color: #717171;
+	font-weight: 300;
+}
 /*-- 頁尾 --*/
 #footer {
 	margin-left: 160px;
 	width: calc(100% - 160px);
 	background: #0B346E;
 	color: #FAFAFA;
+}
+#footer .flogo {position: relative;}
+#footer .flogo::after {
+	content: '';
+	width: 1px;
+	height: 100%;
+	background: #fafafa;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.flogo img {
+	width: auto;
+	max-height: 30px;
+}
+#footer .info {
+	list-style: none;
+	margin: 0;
+}
+#footer .info li {
+		display: flex;
+		align-items: center;
+		margin: 5px 0;
+}
+#footer .info .material-icons {
+	font-size: 15px;
+	margin: 0 15px;
 }
