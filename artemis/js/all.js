@@ -14,7 +14,6 @@ let roomsList = document.querySelector("#roomList");
 let singleRoom = document.querySelector("#singleRoom"); 
 
 
-
 //判斷
 window.onload = () => {
     getData(`${roomUrl}rooms`);
@@ -76,7 +75,7 @@ const renderRooms = () => {
     if (roomsData.length === 6) {
         roomsData.forEach((item) => {
             roomElement += ` 
-            <div class="roomBox col-12 p-0" style="background: url(${item.imageUrl[0]});">
+            <div class="roomBox col-12 p-0 border-0" style="background: url(${item.imageUrl[0]});">
                 <div class="roomInfo col-4 h-100">
                     <div class="title">客房介紹</div>
                     <div class="roomName">${item.name}</div>

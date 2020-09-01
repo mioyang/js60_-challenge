@@ -9,7 +9,8 @@ body {
 
 a:hover, a:focus {text-decoration: none;}
 
-/*-- 側選單 --*/
+
+/*--側選單 --*/
 .sideNav {
 	width: 160px;
 	height: 100vh;
@@ -257,6 +258,7 @@ a:hover, a:focus {text-decoration: none;}
 }
 .roomBox {
 	height: 600px;
+	outline: none !important;
 	overflow: hidden;
 	position: relative;
 	background-size: cover !important;
