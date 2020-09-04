@@ -56,7 +56,7 @@ const getRoom = (apiUrl) => {
         } else {
             roomInfo = res.data.room[0];
             // console.log(roomInfo);
-            // renderRoomDetail();
+            renderRoomDetail();
         }
 
         // console.log('newList', roomsData);
@@ -75,7 +75,7 @@ const renderRooms = () => {
     if (roomsData.length === 6) {
         roomsData.forEach((item) => {
             roomElement += ` 
-            <div class="roomBox col-12 p-0 border-0" style="background: url(${item.imageUrl[0]});">
+            <div class="roomBox col-12 p-0 border-0 bg-cover" style="background: url(${item.imageUrl[0]});">
                 <div class="roomInfo col-4 h-100">
                     <div class="title">客房介紹</div>
                     <div class="roomName">${item.name}</div>
@@ -86,7 +86,6 @@ const renderRooms = () => {
             </div>`;
         });
     }
-    
     roomsList.innerHTML = roomElement;
     // roomsList.appendChild(roomElement);
     // roomsList.insertAdjacentHTML('afterbegin', roomElement);
@@ -110,32 +109,67 @@ const renderRooms = () => {
 const renderRoomDetail = () => {
     console.log('roomInfo', roomInfo);
     let roomElement = '';
-    roomElement += `
-        <div class="col-12 mb-3">
-            <a class="btnBack" href="#" onclick="history.go(-1)"><span class="lnr lnr-chevron-left"></span>回上一頁</a>
-        </div>
-        <div class="col-12 roomImg mb-3">
-            <div class="col-8 imgbox-left p-0" style="background:url(${roomInfo.imageUrl[0]});"></div>
-            <div class="col-4 p-0">
-                <div class="col-12 p-0 imgbox-right" style="background:url(${roomInfo.imageUrl[1]});"></div>
-                <div class="col-12 p-0 imgbox-right" style="background:url(${roomInfo.imageUrl[2]});"></div>
+    
+    roomElement +=`
+        <div class="col-6">
+            <div class="roomTitle">
+                <div class="logo"><img src="images/flogo.svg" alt=""></div>
+                <h1 class="font-weight-bold mb-3 pb-2">${roomInfo.name}</h1>
+            </div>
+            <div class="w-50 roomImg">
+                <div class="bg-cover imgbox" style="background:url(${roomInfo.imageUrl[0]});"></div>
+                <div class="bg-cover imgbox" style="background:url(${roomInfo.imageUrl[1]});"></div>
+                <div class="bg-cover imgbox" style="background:url(${roomInfo.imageUrl[2]});"></div>
             </div>
         </div>
-        <div class="col-12">
-            <h2 class="font-weight-bold mb-3 pb-2">${roomInfo.name}</h1>
-            <div class="d-flex mb-3">
-                <h5 class="card-text text-secondary mr-3"><small>平日</small> NT$ ${roomInfo.normalDayPrice}</h5>
-                <h5 class="card-text text-danger"><small>假日</small> NT$ ${roomInfo.holidayPrice}</h5>
+        <div class="col-6 offset-md-6 p-5" id="roomDetail">
+            <div class="col-12 py-3">
+                <div class="h3 title mt-5">房型介紹<span>Introduction</span></div>
+                <div class="roomPrice mb-3">
+                <div class="h4"><small>平日</small> NT$ ${roomInfo.normalDayPrice}</div>
+                <div class="h4 ml-5"><small>假日</small> NT$ ${roomInfo.holidayPrice}</div>
+                </div>
+                <p>${roomInfo.description}</p>
             </div>
-            <ul>
+            <div class="col-12 py-3">
+                <div class="h3 title mt-5">房間規格<span>Specifications</span></div>
+                <ul class="list-none">
                 <li>房客人數限制：${roomInfo.descriptionShort.GuestMin} - ${roomInfo.descriptionShort.GuestMax}</li>
                 <li>床型：${roomInfo.descriptionShort.Bed[0]}</li>
                 <li>衛浴數量：${roomInfo.descriptionShort["Private-Bath"]} 間</li>
                 <li>房間大小：${roomInfo.descriptionShort.Footage}坪 </li>
-            </ul>
+                </ul>
+            </div>
+            <div class="col-12 py-3">
+                <div class="h3 title mt-5">入住須知<span>Notice</span></div>
+                <ol>
+                    <li>平日：週日 ~ 週四 / 假日：週五 ~ 週六、國定假日。</li>
+                    <li>入住時間${roomInfo.checkInAndOut.checkInEarly}後，退房時間${roomInfo.checkInAndOut.checkOut}前，入住最晚保留時間${roomInfo.checkInAndOut.checkInLate}。</li>
+                    <li>若因交通或其他因素需延遲入住，請事先電話告知延遲入住時間，若無告知，超過時間將取消保留訂房。</li>
+                    <li>小孩若不佔床，不另收取費用，恕不提供備品使用。</li>
+                    <li>免費提供嬰兒床、嬰兒澡盆、奶瓶消毒鍋及嬰兒沐浴備品(須事先預定)。</li>
+                    <li>依菸害防治法，本旅店全面禁菸。</li>
+                    <li>除導盲犬外，旅店禁止攜帶寵物進入。</li>
+                    <li>寧靜的氣氛是我們所追求的，故只招待當天已預約之住客，謝絕親友團、訪客等入園參觀。</li>
+                    <li>價格及內容有所異動時，不再另行通知。</li>
+                </ol>
+            </div>
         </div>
     `;
     singleRoom.innerHTML = roomElement;
+
+    if ($('.roomImg').length > 0) {
+        $('.roomImg').slick({
+            autoplay: true,
+            swipe: false,
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 3000,
+            fade: true,
+            cssEase: 'linear'
+        });
+    }
 }
 
 // {
@@ -186,4 +220,3 @@ const renderRoomDetail = () => {
 // 10: 00
 
 // Wi - Fi
-

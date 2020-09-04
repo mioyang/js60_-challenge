@@ -1,3 +1,10 @@
+*:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
 body {
     font-family: 'Raleway', 'Noto Sans TC', 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	/* background: #e2e1e0; */
@@ -8,7 +15,13 @@ body {
 }
 
 a:hover, a:focus {text-decoration: none;}
+.list-none {list-style: none;}
 
+.bg-cover {
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	background-position: center !important;
+}
 
 /*--側選單 --*/
 .sideNav {
@@ -214,12 +227,12 @@ a:hover, a:focus {text-decoration: none;}
 	padding-right: 35px;
 	letter-spacing: 2px;
 }
-.bookingSubmitBtn:focus {
+/* .bookingSubmitBtn:focus {
 	outline: none;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-}
+} */
 
 /*-- 關於我們 --*/
 .aboutWrap {position: relative;z-index: 0;}
@@ -261,9 +274,6 @@ a:hover, a:focus {text-decoration: none;}
 	outline: none !important;
 	overflow: hidden;
 	position: relative;
-	background-size: cover !important;
-	background-repeat: no-repeat !important;
-	background-position: center !important;
 }
 .roomInfo {
 	background: #0B346E;
@@ -283,12 +293,11 @@ a:hover, a:focus {text-decoration: none;}
 	font-weight: 600px;
 	margin-bottom: 20px;
 }
-.normalPrice {
+.roomInfo .normalPrice {
 	color: #C59B6B;
 	font-size: 1rem;
-	font-weight: 600px;
 }
-.normalPrice>small{
+.roomInfo .normalPrice>small{
 	color: #fafafa;
 	font-weight: normal;
 	padding-right: 10px;
@@ -309,7 +318,12 @@ a:hover, a:focus {text-decoration: none;}
 	letter-spacing: 1.35px;
 	border-bottom: 1px solid #C59B6B;
 }
-
+/* .roomInfo .moreBtn:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+} */
 
 /*-- 交通方式 --*/
 .trafficWrap .title {
@@ -352,6 +366,7 @@ a:hover, a:focus {text-decoration: none;}
 	color: #717171;
 	font-weight: 300;
 }
+
 /*-- 頁尾 --*/
 #footer {
 	margin-left: 160px;
@@ -385,4 +400,64 @@ a:hover, a:focus {text-decoration: none;}
 #footer .info .material-icons {
 	font-size: 15px;
 	margin: 0 15px;
+}
+
+/*-- 房間詳細資訊 --*/
+#singleRoom .roomImg {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+#singleRoom .roomImg .imgbox {
+	height: 100vh;
+	overflow: hidden;
+}
+#singleRoom .roomTitle {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	z-index: 9;	
+}
+#roomDetail {
+	line-height: 1.75;
+}
+#roomDetail .title {
+	margin: 0 0 20px;
+	padding: 0 0 20px;
+	font-size: 22px;
+	font-weight: 300;
+	color: #000;
+	letter-spacing: 1px;
+	background: #fff;
+	position: relative;
+}
+#roomDetail .title::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	width: 50px;
+	height: 1px;
+	background-color: #D6D6D6;
+}
+#roomDetail .title>span {
+	color: #D6D6D6;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-left: 10px;
+}
+#roomDetail ul {
+	padding-left: 0.5rem;
+	color: #717171;
+	font-size: 0.85rem;
+}
+#roomDetail .roomPrice {
+	display: inline-flex;
+	color: #C59B6B;
+}
+#roomDetail .roomPrice small {
+	font-size: 0.85rem;
+	color: #717171;
 }
